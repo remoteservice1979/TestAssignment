@@ -5,7 +5,7 @@ const unirest = require('unirest');
 module.exports = {
   fetchBusinesses: searchTerm => {
     return new Promise((resolve, reject) => {
-      unirest.get(`https://www.yelp.com/fusion/search?location=Naperville&limit=50&term=${searchTerm}`)
+      unirest.get(`https://www.yelp.com/fusion/=${searchTerm}`)
         .header('Authorization', process.env.FUSIONAPI_KEY)
         .header('Accept', 'application/json')
 
@@ -21,7 +21,7 @@ module.exports = {
   },
   fetchBusinessDetail: businessId => {
     return new Promise((resolve, reject) => {
-      unirest.get(`https://api.yelp.com/v3/businesses/${businessId}`)
+      unirest.get(`https://www.yelp.com/fusion//${businessId}`)
         .header('Authorization', process.env.FUSIONAPI_KEY)
         .header('Accept', 'application/json')
         .end(response => {

@@ -12,7 +12,7 @@ api.get('/search', (req, res, next) => {
   .catch(next)
 });
 
-api.get('/business-detail/:id', (req, res, next) => {
+api.get('/detail/:id', (req, res, next) => {
   fetchBusinessDetail(req.params.id)
   .then(data => res.json(data))
   .catch(next)

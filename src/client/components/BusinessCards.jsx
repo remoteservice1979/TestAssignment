@@ -43,7 +43,7 @@ function BusinessCards(props) {
   return (
     <div style={styles.resultsContainer}>
       <div style={styles.gemContainer}>
-        <i className="fas fa-gem" style={styles.gemColor} /> = Highly Rated
+        <i className="fas fa-gem" style={styles.gemColor} /> = Highly Rated IceCream
       </div>
       <br/>
       {

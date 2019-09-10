@@ -21,7 +21,7 @@ export default function App() {
           <div className='scroll-container'>
             <Switch>
               <Route exact path='/' component={Search} />
-              <Route path='/business-detail/:id' component={BusinessDetail} />
+              <Route path='/detail/:id' component={BusinessDetail} />
               <Route render={function() {
                   return <p>Not Found</p>
               }} />

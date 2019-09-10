@@ -35,13 +35,3 @@ module.exports = {
     });
   },
 }
-
-/**
- * Query Strings:
- * Returns the first 50 businesses based on user search term
- *    --> https://api.yelp.com/v3/businesses/search?location=Naperville&limit=50&term=userinput
- *
- * To get the next 50 businesses we need to add an offset parameter to the query
- *    --> https://api.yelp.com/v3/businesses/search?location=Naperville&limit=50&offset=51&term=userinput
- *
- */

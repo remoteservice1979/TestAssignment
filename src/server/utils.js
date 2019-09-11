@@ -1,14 +1,18 @@
 'use strict'
 
 const unirest = require('unirest');
+const dotenv = require('dotenv');
+dotenv.config();
+console.log(`Your port is ${process.env.FUSIONAPI_KEY}`); // 8626
 
 module.exports = {
   fetchBusinesses: searchTerm => {
+  //  console.log("This fusstion API", process.env.FUSIONAPI_KEY)
+    console.log(`Your port is ${process.env.FUSIONAPI_KEY}`);
     return new Promise((resolve, reject) => {
-      unirest.get(`https://www.yelp.com/fusion/=${searchTerm}`)
-        .header('Authorization', process.env.FUSIONAPI_KEY)
+     unirest.get(`https://api.yelp.com/v3/businesses/search?location=Naperville&limit=50&term=${searchTerm}`)
+        .header('Authorization',  `${process.env.FUSIONAPI_KEY}`)
         .header('Accept', 'application/json')
-
         .end(response => {
           if (response.status === 200) {
             resolve(response.body);
@@ -21,8 +25,8 @@ module.exports = {
   },
   fetchBusinessDetail: businessId => {
     return new Promise((resolve, reject) => {
-      unirest.get(`https://www.yelp.com/fusion//${businessId}`)
-        .header('Authorization', process.env.FUSIONAPI_KEY)
+      unirest.get(`https://api.yelp.com/v3/businesses/${businessId}`)
+        .header('Authorization', `${process.env.FUSIONAPI_KEY}`)
         .header('Accept', 'application/json')
         .end(response => {
           if (response.status === 200) {

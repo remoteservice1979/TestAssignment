@@ -15,7 +15,7 @@ export default {
   },
   fetchBusinessDetail: async businessId => {
     try {
-      const businessDetail = await axios.get(`detail/${businessId}`);
+      const businessDetail = await axios.get(`/business-detail/${businessId}`);
       return businessDetail.data;
     } catch (error) {
       console.warn(error);

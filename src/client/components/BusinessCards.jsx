@@ -85,6 +85,13 @@ function BusinessCards(props) {
                   : 'Unknown location'
                 }
               </p>
+
+              <p style={styles.categoryContainer}>
+                {
+                  business.name
+                }
+              </p>
+
             </article>
           )
         )

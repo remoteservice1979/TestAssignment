@@ -18,6 +18,7 @@ module.exports = {
      location: 'Los Angeles',
      limit: 5,
      sort_by:'rating',
+     offset : 100
      // sort_order:'desc'
    };
 

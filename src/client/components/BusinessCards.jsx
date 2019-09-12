@@ -17,7 +17,7 @@ const styles = {
     marginBottom: '2rem',
   },
   gemColor: {
-    color: 'red',
+    color: 'green',
     paddingTop: '1.4rem',
     paddingRight: '.5rem',
   },
@@ -55,6 +55,7 @@ function BusinessCards(props) {
                   ? <i className="fas fa-gem" style={styles.gemColor} />
                   : null
                 }
+                <h5> {business.rating} </h5>
                 <Link to={`/business-detail/${business.id}`}>
                   <h4>{business.name}</h4>
                 </Link>

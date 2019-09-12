@@ -12,7 +12,7 @@ const orderBy = require('lodash/orderBy');
 const apiKey = `${process.env.FUSIONAPI_KEY}`
 module.exports = {
   fetchBusinesses: searchTerm => {
-
+// Alpharetta
   const searchRequest = {
      term: 'restaurants',
      location: 'Los Angeles',

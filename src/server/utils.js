@@ -12,13 +12,14 @@ const orderBy = require('lodash/orderBy');
 const apiKey = `${process.env.FUSIONAPI_KEY}`
 module.exports = {
   fetchBusinesses: searchTerm => {
-
+// Alpharetta
   const searchRequest = {
      term: 'restaurants',
-     location: 'Los Angeles',
-     limit: 5,
-     sort_by:'rating',
-     offset : 100
+      location: 'Los Angeles',
+     //location:'Alpharetta',
+      limit: 50,
+    // // sort_by:'rating',
+    //  offset : 50
      // sort_order:'desc'
    };
 
